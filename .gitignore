@@ -18,6 +18,10 @@ spajanje.txt
 *temp.wav
 *_synced.wav
 
+# Swift build artefakti
+.build/
+.swiftpm/
+
 # Logovi i arhive
 *.log
 *.zip
