@@ -58,5 +58,33 @@ The script uses named arguments. Order does not matter. You can pass as many `--
 
 All runs are logged to `sync_YYYYMMDD_HHMMSS.log` in the output directory. Temporary files are automatically cleaned up via a `trap`, even if the script fails mid-execution.
 
+## 🖥️ GUI App (Podcast Producer)
+
+A native macOS SwiftUI app that provides a visual interface for selecting files and generating the CLI command. Instead of manually typing long file paths, use the GUI to browse for files and copy the ready-made command to your terminal.
+
+![Podcast Producer GUI](assets/podcast-producer-gui.png)
+
+### Requirements
+* macOS 14 (Sonoma) or later
+* Xcode or Swift toolchain installed
+
+### Build & Run
+```bash
+cd PodcastProducer
+swift run
+```
+
+Or open in Xcode:
+```bash
+open PodcastProducer/Package.swift
+```
+
+### Features
+* Native file pickers for audio (`.wav`) and video (`.mov`, `.mp4`) files
+* Drag & drop support for LUMIX video files
+* Auto-detects `podcast_sync.sh` location
+* Generates the full CLI command with `time` supervisor
+* One-click **Copy to Clipboard** — paste into terminal and run
+
 ## 📝 License
 This project is open-sourced under the MIT License.
